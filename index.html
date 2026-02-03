@@ -226,9 +226,53 @@
         }
 
         .cta-text { font-size: 2rem; font-family: 'Space Grotesk'; font-weight: 700; margin-bottom: 20px; color: #fff; }
-        .signature { margin-top: 50px; color: #666; font-size: 0.9rem; letter-spacing: 1px; }
+        /* RESPONSIVE FIXES */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .section-title { font-size: 1.8rem; }
+            
+            .market-pulse-box {
+                padding: 30px 20px;
+            }
+            .pulse-stat {
+                font-size: 2.5rem;
+            }
 
-    </style>
+            .audit-section, .leak-grid {
+                grid-template-columns: 1fr; /* Stack vertically on mobile */
+                gap: 30px;
+            }
+            
+            .chart-card, .leak-card {
+                padding: 20px;
+            }
+
+            .timeline {
+                padding-left: 20px; /* Less padding on mobile */
+            }
+            .timeline::before {
+                left: 10px; /* Adjust line position */
+            }
+            .phase::before {
+                left: 5px; /* Adjust dot position */
+                width: 10px; height: 10px;
+            }
+
+            .tech-stack {
+                flex-wrap: wrap;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .cta-box {
+                padding: 40px 20px;
+            }
+            .cta-text {
+                font-size: 1.5rem;
+            }
+        }
 </head>
 <body>
 
