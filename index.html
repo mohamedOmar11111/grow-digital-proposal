@@ -35,6 +35,45 @@
             padding: 80px 20px;
         }
 
+        /* TABS */
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .tab-link {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .tab-link:hover, .tab-link.active {
+            color: #fff;
+            background: var(--surface-hover);
+            border: 1px solid var(--border);
+        }
+
+        .tab-link.special {
+            background: rgba(255, 59, 48, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .tab-link.special:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
         /* HEADER */
         header {
             text-align: center;
@@ -272,11 +311,35 @@
             .cta-text {
                 font-size: 1.5rem;
             }
+            
+            .tab-nav {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
+    <script>
+        function loadTurnaroundPlan() {
+            // Check if the file exists locally or redirect
+            // Assuming the file is in the same directory for this demo
+            window.location.href = "Grow_Digital_Turnaround_Plan.html";
+        }
+    </script>
+</head>
 <body>
 
 <div class="container">
+    
+    <!-- NAVIGATION TABS -->
+    <div class="tab-nav">
+        <a href="#" class="tab-link active">Proposal Overview</a>
+        <a href="#" class="tab-link">Market Analysis</a>
+        <!-- NEW TAB ADDED HERE -->
+        <button onclick="loadTurnaroundPlan()" class="tab-link special">
+            🚀 VIEW TURNAROUND STRATEGY
+        </button>
+    </div>
+
     <header>
         <div class="logo-mark">CONFIDENTIAL // GROW DIGITAL</div>
         <h1>STRATEGIC<br>GROWTH ARCHITECTURE</h1>
